@@ -1,0 +1,18 @@
+header{
+    background-color: red;
+}
+
+#logo img{
+    width: 200px;
+    height: 75px;  
+}
+
+
+
+section{
+    background-color: darkgray;
+}
+
+footer{
+    background-color: darkred;
+}
