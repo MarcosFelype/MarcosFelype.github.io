@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/style.css">
     <link rel="stylesheet" href="../../styles/produtos/doces/model_vendas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Comprar produto</title>
 </head>
 <body>
@@ -46,70 +49,87 @@
     <section>
         <h1>Doce de Leite Granulado</h1>
 
-        <div id="produto">
-            <img src="../../assets/camera.png" alt="Produto cheio" id="img_princ" class="img_prod">
-            <img src="../../assets/camera.png" alt="Produto cheio" id="img_princ" class="img_prod">
-            <img src="../../assets/camera.png" alt="Produto cheio" id="img_princ" class="img_prod">
-            <img src="../../assets/camera.png" alt="Produto cheio" id="img_princ" class="img_prod">
-        </div>
+        <div id="produto_e_compra">
+            <div id="produto">
+                <div class="img_sec">
+                    <img src="../../assets/camera.png" alt="Produto cheio" >
+                    <img src="../../assets/camera.png" alt="Produto cheio" >
+                    <img src="../../assets/camera.png" alt="Produto cheio" >
+                </div>
+                <div id="img_princ">
+                    <img src="../../assets/camera.png" alt="Produto cheio">
+                </div>
 
-        <div id="compra">
-            <h4>Doce de Leite Granulado</h4>
-            <h2>R$ 15,00</h2>
-            <button type="submit">Calcular frete</button>
-            <button type="submit">Adicionar ao carrinho</button>
+            </div>
+    
+            <div id="compra">
+                
+                <h2>R$ 15,00</h2>
+                <button type="submit" id="frete">Calcular frete</button>
+                <button type="submit">Adicionar ao carrinho</button>
+            </div>
         </div>
 
     </section>
 
-    <div id="contatos_redes">
-        <div id="contatos" class="footer_section">
-            <h3>Contatos</h3>
-            <span id="whats">
-                <a href="">
-                    <!-- Img whats-->
-                    <img src="" alt="">
-                    (82) 981414027 
-                </a>
-            </span>
-            <span id="fone">
-                <!-- Img telefone-->
-                <img src="" alt="">
-                <h4>(82) 981...</h4>
-            </span>    
-        </div>
-        <div id="redes_sociais">
-            <h3>
-                Acompanhe nossas redes sociais
+    <footer>
+        <div id="institucional" class="footer_section">
+            <h3>Institucional</h3>
+            <a href="/pages/institucional/politica_vendas.html" id="politica_vendas">Política de vendas</a>
+            <a href="/pages/institucional/politica_trocas.html" id="politica_troca">Política de troca</a>
+            <a href="/pages/institucional/privacidade.html" id="política_privacidade">Política de privacidade</a>
+            <a href="/pages/institucional/perguntas_freq.html" id="perguntas_freq">Perguntas frequentes</a>
+            <a href="/pages/institucional/historia.html" id="historia">Nossa história</a>
 
-                <a href="">
-                    <!-- Face-->
-                </a>
-                <a href="">
-                    <!-- insta-->
-                </a>
-                <a href="">
-                    <!-- Twiter-->
-                </a>
+        </div>
+        <div id="contatos_redes">
+            <div id="contatos" class="footer_section">
+                <h3>Contatos</h3>
+                <span id="whats">
+                    <a href="">
+                        <!-- Img whats-->
+                        <img src="" alt="">
+                        (82) 981414027 
+                    </a>
+                </span>
+                <span id="fone">
+                    <!-- Img telefone-->
+                    <img src="" alt="">
+                    <h4>(82) 981...</h4>
+                </span>    
+            </div>
+            <div id="redes_sociais">
+                <h3>
+                    Acompanhe nossas redes sociais
+
+                    <a href="">
+                        <!-- Face-->
+                    </a>
+                    <a href="">
+                        <!-- insta-->
+                    </a>
+                    <a href="">
+                        <!-- Twiter-->
+                    </a>
+                </h3>
+            </div>
+        </div>
+
+        <div id="meios_pagamento" class="footer_section">
+            <h3>Pague com</h3>
+            <a href="">
+                <!-- PIX-->
+            </a>
+            <img src="" alt="">
+        </div>
+
+
+        <div id="selos" class="footer_section">
+            <h3>
+                Selos
             </h3>
         </div>
-    </div>
-
-    <div id="meios_pagamento" class="footer_section">
-        <h3>Pague com</h3>
-        <a href="">
-            <!-- PIX-->
-        </a>
-        <img src="" alt="">
-    </div>
-
-
-    <div id="selos" class="footer_section">
-        <h3>
-            Selos
-        </h3>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
