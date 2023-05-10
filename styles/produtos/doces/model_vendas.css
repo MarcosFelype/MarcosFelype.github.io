@@ -2,6 +2,10 @@ h1{
     margin-bottom: 50px;
 }
 
+#compra button{
+    font-size: 24px;
+}
+
 @media only screen and (max-width: 600px){
     #img_princ img{
         display: block;
@@ -24,21 +28,19 @@ h1{
         height: 200px;
         width: 300px;
     }
+
+    #compra button{
+        width: 100%;
+        box-sizing: border-box;
+        height: 80px;
+
+        background-color: red;
+        cursor: pointer;
+    }
 }
 
 @media only screen and (min-width: 601px){
 
-    /*#img_princ{
-        display:block;
-        margin: auto;
-    }*/
-    
-    /*#produto_e_compra{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }*/
-    
     #produto_e_compra{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -90,7 +92,7 @@ h1{
         margin-bottom: 20px;
     }
 
-    section{
+    main{
         padding-bottom: 50px;
         padding-left: 50px;
     }
