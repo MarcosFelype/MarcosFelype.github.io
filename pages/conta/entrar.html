@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../../styles/conta/entrar.css">
+    <title>Ki Paladar</title>
+</head>
+<body>
+    <header>  <!--  -->
+
+        
+        <div id="opcoes_header">
+            <a href="pages/produtos/doces/leite/doces_leite.html">
+                Doces de leite
+            </a>
+            <a href="pages/produtos/doces/frutas/doces_frutas.html">
+                Doces de frutas
+            </a>
+            <a href="pages/produtos/novidades.html">
+                Novidades
+            </a>
+        </div>
+
+        <div id="logo">
+            <img src="/assets/kipaladar_test.jpg" alt="Imagem" title="Logo Ki Paladar">
+        </div>
+
+        <div id="pesquisa_perfil_carrinho">
+            <div id="pesquisa">
+                <span class="material-symbols-outlined">
+                    search    
+                </span>
+                <input type="text" placeholder="Pesquise sobre produtos, ofertas...">
+            </div>
+            <div id="perfil_carrinho">
+                <a href="">
+                    <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Perfil">
+                        account_circle
+                    </span>
+                </a>
+                <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Carrinho">
+                    shopping_cart
+                </span>
+            </div>
+        </div>
+    </header>
+    
+    <div id="formulario">
+        <form action="" id="form_entrada">
+            <fieldset>
+                <div id="nome">
+                    <label for=""> Usuário </label>
+                    <input type="text">
+                </div>
+
+                <div id="email">
+                    <label for=""> E-mail </label>
+                    <input type="email">
+                </div>
+
+                <button type="submit" onclick="verificarConta()">
+                    Entrar
+                </button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="../../script.js">
+
+    </script>
+</body>
+</html>
