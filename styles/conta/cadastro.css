@@ -1,0 +1,97 @@
+body{
+    background-color: yellowgreen
+}
+
+#formulario{
+    
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    background-color: aqua;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8%;
+    
+    
+    /*background-color: #e1e1e1; 
+                width: 400px; 
+                height: 150px; 
+                left: 50%; 
+                margin: -130px 0 0 -210px; 
+                padding:10px;
+                position: absolute; 
+                top: 50%; */
+}
+
+fieldset{
+    width: 600px;
+    border-radius: 10px;
+}
+
+fieldset input, select{
+    margin-bottom: 10px;
+    height: 30px;
+    background-color: rgb(247, 234, 234);
+    box-shadow: 2px 2px 2px solid rgb(156, 156, 156);
+    padding: 1% 2% 1% 2%;
+    border-bottom-right-radius: 5px;
+}
+
+select{
+    height: 40px;
+    width: 60%;
+}
+
+fieldset label, button{
+    font-size: 15px
+}
+
+fieldset label, input, select{
+    display: block;
+    width: 95%;
+}
+
+
+
+fieldset button {
+    display: block;
+    margin: 15px auto;
+    width: 75%;
+    height: 50px;
+    background-color: rgb(153, 19, 19);
+    font-size: 20px
+}
+
+#cadastro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cadastro a{
+    margin-top: 0;
+}
+
+
+
+
+
+@media only screen and (min-width: 600px){
+    .nome, .senha, .dados_imp1, .dados_imp2{
+        display: inline;
+        width: 48%;
+        margin-right: 2%;
+        float: left
+    }
+
+    .cep_endereco, .detalhamento_endereco, .cidade_estado{
+        width: 48%;
+        margin-right: 2%;
+        display: inline;
+        float: left;
+    }
+    .detalhamento_endereco{
+        width: 31%;
+        margin-right: 2%;
+    }
+}

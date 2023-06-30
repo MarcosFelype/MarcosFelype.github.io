@@ -1,31 +1,83 @@
 body{
-    height: 900px;
     background-color: yellowgreen
 }
 
 #formulario{
-    margin-top: 50px;
+    
     display: flex;
     border-radius: 25px;
     justify-content: center;
     background-color: aqua;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8%;
+    
+    
+    /*background-color: #e1e1e1; 
+                width: 400px; 
+                height: 150px; 
+                left: 50%; 
+                margin: -130px 0 0 -210px; 
+                padding:10px;
+                position: absolute; 
+                top: 50%; */
 }
 
 fieldset{
-    width: 500px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+fieldset input{
+    height: 30px;
+}
+
+fieldset label, button{
+    font-size: 20px
+}
+
+fieldset label, input{
+    display: block;
+    margin-top: 15px;
+    width: 95%;
 }
 
 
 
-fieldset #nome label, #email label{
+
+fieldset button {
     display: block;
+    margin: 15px auto;
+    width: 50%;
+    height: 50px;
+    background-color: red;
+}
+
+#cadastro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cadastro a{
+    margin-top: 0;
+}
+
+
+/*fieldset #nome #email{
+    display: block;
+    width: 95%;
+    margin-top: 15px;
+    font-size: 20px;
 }
 
 fieldset button{
-    margin-top: 50px;
-    background-color: red;
-    width: 400px;
+    background-color: rgb(73, 11, 11);
+    width: 95%;
+    margin-top: 250px;
+    font-size: 20px;
     display: block;
     margin: 0 auto;
-}
+    margin-left: 0;
+}*/
 
