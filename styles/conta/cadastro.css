@@ -1,5 +1,5 @@
 body{
-    background-color: yellowgreen
+    background-color: rgb(233, 217, 217);
 }
 
 #formulario{
@@ -7,7 +7,7 @@ body{
     display: flex;
     border-radius: 25px;
     justify-content: center;
-    background-color: aqua;
+
     align-items: center;
     flex-direction: column;
     margin-top: 8%;
@@ -24,6 +24,7 @@ body{
 }
 
 fieldset{
+    background-color: rgb(199, 146, 146);
     width: 600px;
     border-radius: 10px;
 }
@@ -31,7 +32,7 @@ fieldset{
 fieldset input, select{
     margin-bottom: 10px;
     height: 30px;
-    background-color: rgb(247, 234, 234);
+    background-color: rgb(226, 212, 212);
     box-shadow: 2px 2px 2px solid rgb(156, 156, 156);
     padding: 1% 2% 1% 2%;
     border-bottom-right-radius: 5px;
@@ -43,7 +44,7 @@ select{
 }
 
 fieldset label, button{
-    font-size: 15px
+    font-size: 15px;
 }
 
 fieldset label, input, select{
@@ -58,8 +59,9 @@ fieldset button {
     margin: 15px auto;
     width: 75%;
     height: 50px;
-    background-color: rgb(153, 19, 19);
-    font-size: 20px
+    background-color: rgb(129, 45, 45);
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #cadastro{

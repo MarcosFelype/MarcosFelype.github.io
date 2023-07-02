@@ -1,5 +1,5 @@
-body{
-    background-color: yellowgreen
+body{   
+    background-color: rgb(233, 217, 217);
 }
 
 #formulario{
@@ -7,7 +7,6 @@ body{
     display: flex;
     border-radius: 25px;
     justify-content: center;
-    background-color: aqua;
     align-items: center;
     flex-direction: column;
     margin-top: 8%;
@@ -24,12 +23,19 @@ body{
 }
 
 fieldset{
+    background-color: rgb(199, 146, 146);
     width: 300px;
     border-radius: 10px;
 }
 
 fieldset input{
     height: 30px;
+    margin-bottom: 10px;
+    height: 30px;
+    background-color: rgb(226, 212, 212);
+    box-shadow: 2px 2px 2px solid rgb(156, 156, 156);
+    padding: 1% 2% 1% 2%;
+    border-bottom-right-radius: 5px;
 }
 
 fieldset label, button{
@@ -50,7 +56,8 @@ fieldset button {
     margin: 15px auto;
     width: 50%;
     height: 50px;
-    background-color: red;
+    background-color: rgb(129, 45, 45);
+    cursor: pointer;
 }
 
 #cadastro{
@@ -62,6 +69,8 @@ fieldset button {
 #cadastro a{
     margin-top: 0;
 }
+
+
 
 
 /*fieldset #nome #email{

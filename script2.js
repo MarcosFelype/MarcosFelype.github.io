@@ -1,67 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../styles/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../../styles/conta/cadastro.css">
-    <title>Ki Paladar</title>
-</head>
-<body>
-
-    <header>  <!--  -->
-
-        
-        <div id="opcoes_header">
-            <a href="pages/produtos/doces/leite/doces_leite.html">
-                Doces de leite
-            </a>
-            <a href="pages/produtos/doces/frutas/doces_frutas.html">
-                Doces de frutas
-            </a>
-            <a href="pages/produtos/novidades.html">
-                Novidades
-            </a>
-        </div>
-
-        <div id="logo">
-            <img src="/assets/kipaladar_test.jpg" alt="Imagem" title="Logo Ki Paladar">
-        </div>
-
-        <div id="pesquisa_perfil_carrinho">
-            <div id="pesquisa">
-                <span class="material-symbols-outlined">
-                    search    
-                </span>
-                <input type="text" placeholder="Pesquise sobre produtos, ofertas...">
-            </div>
-            <div id="perfil_carrinho">
-                <a href="">
-                    <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Perfil">
-                        account_circle
-                    </span>
-                </a>
-                <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Carrinho">
-                    shopping_cart
-                </span>
-            </div>
-        </div>
-    </header>
-
-    <div id="formulario">
-        <div id="form">
-
-            <form action="" id="form_cadastro">
-                <fieldset>
-                    <div id="dados_usuario">
-
-                        <h2 id="usuario">
-                            Dados do usuário
-                        </h2>
-                        
-                        <div class="nome" >
+/*
+<div class="nome" >
                             <label for="nome_inicio"> Usuário </label>
                             <input type="text" id="nome_inicio">
                         </div>
@@ -90,7 +28,7 @@
                         
                         <div class="dados_imp1">
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf">
+                            <input type="number" id="cpf">
                         </div>
 
                         <span class="dados_imp1">
@@ -105,7 +43,7 @@
                         
                         <div class="dados_imp2">
                             <label for="celular">Celular</label>
-                            <input type="text" id="celular">
+                            <input type="number" id="celular">
                         </div>
                         
                         <div class="dados_imp2">
@@ -162,33 +100,154 @@
                             </select>
                             
                         </div>
+*/
 
-                    </div>
+const form_cadastro = document.getElementById("form_cadastro");
 
 
+const nome_inicio = document.getElementById("nome_inicio");
+const nome_fim = document.getElementById("nome_fim");
+const email = document.getElementById("email");
+const senha = document.getElementById("criar_senha");
+const senha_confirm = document.getElementById("confirm_senha");
+const cpf = document.getElementById("cpf");
+const sexo = document.getElementById("sexo");
+const celular = document.getElementById("celular");
+const data_nasc = document.getElementById("data_nasc")
 
+//Endereço
+const cep = document.getElementById("cep");
+const endereco = document.getElementById("endereco");
+const numero = document.getElementById("numero");
+const bairro = document.getElementById("bairro");
+const complemento = document.getElementById("complemento");
+const cidade = document.getElementById("cidade");
+const estado = document.getElementById("estado");
 
-                    
+form_cadastro.addEventListener("submit", (event) => {
+    alert("opaa")
+    event.preventDefault();
 
-                    <button type="submit" onclick="">
-                        Cadastrar novo usuário
-                    </button>
-                </fieldset>
-            </form>
-        </div>
-        <div id="cadastro">
-            <p>
-                Já tem uma conta? 
-            </p>
-            <a href="./entrar.html">Faça seu login: </a>
+    /*if(nome_inicio.value == ""){
+        alert("Preencha o nome")
+    }
+    if(nome_fim.value == ""){
+        alert("Preencha o sobrenome.")
+    }
+
+    if(email.value == "" || !emailValido(email)){
+        alert("Preencha o email.")
+    }
+
+    /*if(sexo.value == "--"){
+        alert("Selecione o sexo.")
+    }
     
-        </div>
+    if(celular.value == ""){
+        alert("Preencha o número de celular.")
+    }
 
-    </div>
+    if(data_nasc.value == ""){
+        alert("Preencha a data de nascimento.")
+    }
 
-    <script src="../../script2.js">
+    if(endereco.value == ""){
+        alert("Preencha o endereço.")
+    }
 
-    </script>
+    if(numero.value == ""){
+        alert("Preencha o número.")
+    }
 
-</body>
-</html>
+    if(bairro.value == ""){
+        alert("Preencha o bairro.")
+    }
+
+    if(complemento.value == ""){
+        alert("Preencha o complemento.")
+    }
+
+    if(cidade.value == ""){
+        alert("Preencha a cidade.")
+    }
+
+    if(estado.value == "--"){
+        alert("Selecione um estado.")
+    }*/
+    
+
+    if(cpf.value == "" || !cpfValido(cpf.value)){
+        alert("Preencha o CPF.")
+    }
+
+    if(cep.value == "" || !cepValido(cep.value)){
+        alert("Preencha o CEP.")
+    }
+
+    /*if(!senhaValida(senha.value, 8)){
+        alert("A senha precida de, pelo menos, 8 dígitos.")
+    }
+
+    if(!comparaSenha(senha.value, senha_confirm.value)){
+        alert("A confirmação da senha não condiz com a original ou o campo não possui 8 dígitos.");
+    }*/
+
+    
+
+    form_cadastro.submit();
+
+})
+
+function emailValido(email){
+
+    const emailRegex = new RegExp(
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+    )
+
+    if(emailRegex.test(email)){
+        return true;
+    }
+    return false;
+}
+
+
+function cpfValido(cpf){
+    const cpfRegex = new RegExp(
+        /^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}/
+    )
+
+    if(cpfRegex.test(cpf)){
+        alert(cpf)
+        return true;
+    }else{
+        alert("nn deu "+cpf.value)
+    }
+    return false;
+}
+
+function cepValido(cep){
+    const cepRegex = new RegExp(
+        /^[0-9]{5}-?[0-9]{3}/
+    )
+
+    if(cepRegex.test(cep)){
+        alert(cep)
+        return true;
+    }
+    return false;
+}
+
+function senhaValida(senha, minDigits){
+    if(senha.length >= minDigits){
+        return true;
+    }
+
+    return false;
+}
+
+function comparaSenha(senha, senha_confirm){
+    if(senha == senha_confirm){
+        return true;
+    }
+    return false;
+}
