@@ -45,13 +45,15 @@ h1{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 50px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 500px;
     }
 
     #produto{
         display: grid;
+        gap: 0;
         grid-template-columns: 1fr 1fr ;
-        
-        grid-column-gap: 50px;
     }
 
     .img_sec{
@@ -62,6 +64,7 @@ h1{
         grid-column: 1/2;
         justify-content: space-between;
         align-items: center;
+        width: 75px
     }
     
     .img_sec img {
@@ -69,9 +72,11 @@ h1{
         width: 75px;
     }
 
+
     #img_princ img{
         height: 500px;
-        width: 600px;
+        width: 120%;
+        margin-left: 0;
     }
 
     #compra{
