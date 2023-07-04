@@ -40,7 +40,7 @@
             <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Perfil">
                 account_circle
             </span>
-            <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Carrinho">
+            <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Carrinho" id="carrinho">
                 shopping_cart
             </span>
         </div>
@@ -52,12 +52,17 @@
         <div id="produto_e_compra">
             <div id="produto">
                 <div class="img_sec">
-                    <img src="/assets/produtos/doces_leite/leite_granulado_sec1.jpeg" alt="Produto secundário" title="Produto secundário">
-                    <img src="/assets/produtos/doces_leite/leite_granulado_sec2.jpeg" alt="Produto secundário" title="Produto secundário" >
-                    <img src="/assets/produtos/doces_leite/leite_granulado_sec3.jpeg" alt="Produto secundário" title="Produto secundário">
+                    <img src="/assets/produtos/doces_leite/leite_granulado_princ.jpeg" alt="Produto principal" class="imagem_sec"  title="Produto principal"  onclick="trocaImagem('_princ.jpeg')" >
+
+                    <img src="/assets/produtos/doces_leite/leite_granulado_sec1.jpeg" alt="Produto secundário" title="Produto secundário" class="imagem_sec" onclick="trocaImagem('_sec1.jpeg')">
+
+
+                    <img src="/assets/produtos/doces_leite/leite_granulado_sec2.jpeg" alt="Produto secundário" title="Produto secundário" class="imagem_sec" onclick="trocaImagem('_sec2.jpeg')">
+
+                    <img src="/assets/produtos/doces_leite/leite_granulado_sec3.jpeg" alt="Produto secundário" title="Produto secundário" class="imagem_sec" onclick="trocaImagem('_sec3.jpeg')">
                 </div>
                 <div id="img_princ">
-                    <img src="/assets/produtos/doces_leite/leite_granulado_princ.jpeg" alt="Produto principal" title="Produto principal">
+                    <img src="/assets/produtos/doces_leite/leite_granulado_princ.jpeg" alt="Produto principal" title="Produto principal" id="imagem_princ">
                 </div>
 
             </div>
@@ -65,7 +70,8 @@
             <div id="compra">
                 
                 <h1 id="preco_cifrao">R$</h1>
-                <h1 id="preco_numero">15.00</h1>
+                <!--<input id="preco_numero" value="15" readonly> -->
+                <h1 id="preco_numero">15,00</h1>
 
                 <label for="quant" id="label_quantidade" class="quant_incremento">Quantidade:</label>
                 
