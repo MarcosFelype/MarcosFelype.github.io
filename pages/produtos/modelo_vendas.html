@@ -64,9 +64,18 @@
     
             <div id="compra">
                 
-                <h1>R$ 15,00</h1>
-                <button type="submit" id="frete">Calcular frete</button>
-                <button type="submit">Adicionar ao carrinho</button>
+                <h1 id="preco_cifrao">R$</h1>
+                <h1 id="preco_numero">15.00</h1>
+
+                <label for="quant" id="label_quantidade" class="quant_incremento">Quantidade:</label>
+                
+                    <input type="number" name="" id="quant" class="quant_incremento" value="1">
+                <div>
+                    <input type="text" class="frete" id="pesquisar_frete">
+                    <button type="submit" class="frete" id="calculo_frete">Calcular frete</button>
+
+                </div>
+                <button type="submit" id="add_carrinho">Adicionar ao carrinho</button>
             </div>
         </div>
 
@@ -135,6 +144,10 @@
             </h3>
         </div>
     </footer>
+
+    <script src="../../scripts/model_vendas.js">
+
+    </script>
 
 </body>
 </html>
