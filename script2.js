@@ -128,7 +128,7 @@ form_cadastro.addEventListener("submit", (event) => {
     alert("opaa")
     event.preventDefault();
 
-    /*if(nome_inicio.value == ""){
+    if(nome_inicio.value == ""){
         alert("Preencha o nome")
     }
     if(nome_fim.value == ""){
@@ -139,7 +139,7 @@ form_cadastro.addEventListener("submit", (event) => {
         alert("Preencha o email.")
     }
 
-    /*if(sexo.value == "--"){
+    if(sexo.value == "--"){
         alert("Selecione o sexo.")
     }
     
@@ -173,7 +173,7 @@ form_cadastro.addEventListener("submit", (event) => {
 
     if(estado.value == "--"){
         alert("Selecione um estado.")
-    }*/
+    }
     
 
     if(cpf.value == "" || !cpfValido(cpf.value)){
@@ -184,13 +184,13 @@ form_cadastro.addEventListener("submit", (event) => {
         alert("Preencha o CEP.")
     }
 
-    /*if(!senhaValida(senha.value, 8)){
+    if(!senhaValida(senha.value, 8)){
         alert("A senha precida de, pelo menos, 8 dígitos.")
     }
 
     if(!comparaSenha(senha.value, senha_confirm.value)){
         alert("A confirmação da senha não condiz com a original ou o campo não possui 8 dígitos.");
-    }*/
+    }
 
     
 

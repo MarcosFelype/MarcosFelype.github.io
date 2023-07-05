@@ -49,9 +49,15 @@
     </header>
 
     <main>
-        <div id="img_carrossel">
-            <img src="/assets/kipaladar_test.jpg" alt="Logo Ki Paladar" title="Logo Ki Paladar">
-        </div>
+        <div class="container-slider">
+            <button id="prev-button"><img src="assets/seta_esq.png" alt="prev-button"></button>
+            <div class="container-images">
+              <img src="assets/kipaladar_test.jpg" alt="Ki Paladar test" class="slider on">
+              <img src="assets/cacto.jpg" alt="cacto" class="slider">
+              <img src="assets/espaco.jpg" alt="espaco" class="slider">
+            </div>
+            <button id="next-button"><img src="assets/seta_dir.png" alt="next-button"></button>
+          </div>
 
         <div id="produtos">  
             <div id="mais_vendidos" class="produtos_sections">
@@ -360,5 +366,9 @@
             </h3>
         </div>
     </footer>
+
+    <script src="index.js">
+
+    </script>
 </body>
 </html>
