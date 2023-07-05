@@ -2,6 +2,12 @@ body{
     background-color: rgb(233, 217, 217);
 }
 
+#titulo_login{
+    display: block;
+    margin: -20px auto;
+    margin-bottom: 30px;
+}
+
 #formulario{
     
     display: flex;
@@ -10,16 +16,7 @@ body{
     align-items: center;
     flex-direction: column;
     margin-top: 8%;
-    
-    
-    /*background-color: #e1e1e1; 
-                width: 400px; 
-                height: 150px; 
-                left: 50%; 
-                margin: -130px 0 0 -210px; 
-                padding:10px;
-                position: absolute; 
-                top: 50%; */
+
 }
 
 fieldset{
@@ -42,7 +39,7 @@ fieldset label, button{
     font-size: 20px
 }
 
-fieldset label, input{
+fieldset label, fieldset input{
     display: block;
     margin-top: 15px;
     width: 95%;
@@ -64,29 +61,23 @@ fieldset button {
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: -30px
+}
+
+#cadastro a, #cadastro p{
+    font-size: 20px;
+}
+
+#cadastro p{
+    margin: 15px 0 5px 0;
 }
 
 #cadastro a{
     margin-top: 0;
+    text-decoration: none;
+    color: rgb(129, 41, 41);
+    margin-bottom: 50px;
 }
 
 
-
-
-/*fieldset #nome #email{
-    display: block;
-    width: 95%;
-    margin-top: 15px;
-    font-size: 20px;
-}
-
-fieldset button{
-    background-color: rgb(73, 11, 11);
-    width: 95%;
-    margin-top: 250px;
-    font-size: 20px;
-    display: block;
-    margin: 0 auto;
-    margin-left: 0;
-}*/
 

@@ -2,23 +2,28 @@ const form = document.getElementById("form_entrada");
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 
-console.log(form,email,senha)
+var email_teste = "abc@domain.com";
+var senha_teste = "40028922";
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
+    verificacoes();
+    form.submit();
+});
 
-    if(email.value == "" || !emailValido(email)){
-        alert("Preencha o email")
-    }else{
-        alert(email.value)
+function verificacoes(){
+    if((email.value != email_teste) || (senha.value != senha_teste)){
+        alert("Email ou senha estão errados.")
+    }
+
+    if(email.value == "" || !emailValido(email.value)){
+        alert("Preencha adequadamente o email.")
     }
 
     if(!senhaValida(senha.value, 8)){
-        alert("A senha precisa de ao menos 8 dígitos.")
+        alert("A senha precisa de, ao menos, 8 dígitos.")
     }
-
-    form.subimit();
-});
+}
 
 function emailValido(email){
 
@@ -40,9 +45,3 @@ function senhaValida(senha, minDigits){
     return false;
 }
 
-
-
-
-function verificarConta(){
-    alert("Bem vindo!")
-}

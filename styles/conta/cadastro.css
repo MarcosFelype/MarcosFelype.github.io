@@ -2,15 +2,20 @@ body{
     background-color: rgb(233, 217, 217);
 }
 
+#titulo_cadastro{
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
 #formulario{
     
     display: flex;
     border-radius: 25px;
     justify-content: center;
-
     align-items: center;
     flex-direction: column;
     margin-top: 8%;
+    /*width: 70%;*/
     
     
     /*background-color: #e1e1e1; 
@@ -25,8 +30,11 @@ body{
 
 fieldset{
     background-color: rgb(199, 146, 146);
+    /*width: 50%;
+    margin-left: 25%;*/
     width: 600px;
     border-radius: 10px;
+    
 }
 
 fieldset input, select{
@@ -49,7 +57,7 @@ fieldset label, button{
 
 fieldset label, input, select{
     display: block;
-    width: 95%;
+    width: 95%; 
 }
 
 
@@ -64,26 +72,45 @@ fieldset button {
     cursor: pointer;
 }
 
-#cadastro{
+#entrar{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-#cadastro a{
+#entrar p, #entrar a{
+    font-size: 20px;
+}
+
+#entrar p{
+    margin: 15px 0 5px 0;
+}
+
+#entrar a{
     margin-top: 0;
+    text-decoration: none;
+    color: rgb(129, 41, 41);
+    margin-bottom: 50px;
 }
 
 
 
 
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 855px){
     .nome, .senha, .dados_imp1, .dados_imp2{
         display: inline;
         width: 48%;
         margin-right: 2%;
-        float: left
+        float: left;
+    }
+
+    #email{
+        width: 96.7%;
+    }
+
+    #sexo{
+        width: 100%;
     }
 
     .cep_endereco, .detalhamento_endereco, .cidade_estado{
@@ -93,7 +120,34 @@ fieldset button {
         float: left;
     }
     .detalhamento_endereco{
-        width: 31%;
+        width: 31.3%;
         margin-right: 2%;
+    }
+
+    #estado{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:855px) {
+    fieldset{
+        display: block;
+    }
+
+    select{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 729px){
+    fieldset{
+        margin: 0 auto;
+        display: block;
+        width: 90%
+    }
+    
+
+    select{
+        width: 100%;
     }
 }
