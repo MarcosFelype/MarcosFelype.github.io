@@ -51,6 +51,11 @@ main{
     background-color: rgb(233, 217, 217);
 }
 
+#img_carrosel{
+    display: block;
+    margin: 0 auto;
+}
+
 
 .produtos_sections{
     margin-bottom: 50px;
@@ -153,8 +158,6 @@ footer {
         margin-right: -15px;
         margin-left: 10px;
     }
-
-    
 
     .container-slider {
         display: flex;
