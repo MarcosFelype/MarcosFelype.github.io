@@ -4,7 +4,11 @@ const btnNext = document.getElementById('next-button');
 
 var currentSlide = 0;
 
-function hideSlider(){
+btnNext.addEventListener("click", avancarSlider());
+btnPrev.addEventListener("click", voltarSlider());
+
+
+/*function hideSlider(){
     slider.forEach(item => item.classList.remove('slider'));
 
     console.log(slider)
@@ -33,7 +37,33 @@ function voltarSlider(){
         currentSlide--;
     }
     showSlider();
+    alert("clicou esquerda")
+}*/
+
+
+
+function validacao(){
+    let nome = document.getElementById("nome");
+    let email = document.getElementById("email");
+    
+    if(nome.value == ""){
+        alert("Preencha o nome.");
+    }
+
+    if(email.value == "" || !emailValido(email.value)){
+        alert("E-mail inválido.")
+    }
+
 }
 
-btnNext.addEventListener("click", avancarSlider());
-btnPrev.addEventListener("click", voltarSlider())
+function emailValido(email){
+
+    const emailRegex = new RegExp(
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+    )
+
+    if(emailRegex.test(email)){
+        return true;
+    }
+    return false;
+}

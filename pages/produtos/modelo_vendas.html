@@ -18,12 +18,10 @@
             <a href="../produtos/doces/leite/doces_leite.html">
                 Doces de leite
             </a>
-            <a href="../produtos/doces/leite/doces_frutas.html">
+            <a href="../produtos/doces/frutas/doces_frutas.html">
                 Doces de frutas
             </a>
-            <a href="../produtos/novidades.html">
-                Novidades
-            </a>
+            
         </div>
 
         <div id="logo">
@@ -35,19 +33,23 @@
                 <span class="material-symbols-outlined">
                     search    
                 </span>
-                <input type="text" placeholder="Pesquise sobre produtos, ofertas...">
+                <input type="text" placeholder="Pesquise sobre produtos, ofertas..." id="pesq_input">
             </div>
-            <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Perfil">
-                account_circle
-            </span>
-            <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Carrinho" id="carrinho">
-                shopping_cart
-            </span>
+            <div id="perfil_carrinho">
+                <a href="../conta/entrar.html">
+                    <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Perfil" id="meu_perfil_icon">
+                        account_circle
+                    </span>
+                </a>
+                <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Carrinho">
+                    shopping_cart
+                </span>
+            </div>
         </div>
     </header>
 
     <main>
-        <h1>Exemplo de venda</h1>
+        <h1>Doce de Leite Granulado 700G</h1>
 
         <div id="produto_e_compra">
             <div id="produto">
@@ -69,17 +71,19 @@
     
             <div id="compra">
                 
-                <h1 id="preco_cifrao">R$</h1>
+                <h1 id="preco_cifrao" class="preco_prod">R$</h1>
                 <!--<input id="preco_numero" value="15" readonly> -->
-                <h1 id="preco_numero">15,00</h1>
+                <h1 id="preco_numero" class="preco_prod">15,00</h1>
 
-                <label for="quant" id="label_quantidade" class="quant_incremento">Quantidade:</label>
+                <h4 id="label_quant">
+                    <label for="quant" id="label_quantidade" class="quant_incremento">Quantidade:</label>
+                </h4>
                 
                     <input type="number" name="" id="quant" class="quant_incremento" value="1">
+                    <h4 id="titulo_frete">Digite abaixo o seu CPF para cálculo do frete</h4>
                 <div>
-                    <input type="text" class="frete" id="pesquisar_frete">
-                    <button type="submit" class="frete" id="calculo_frete">Calcular frete</button>
-
+                    <input type="text" id="pesquisar_frete" class="frete">
+                    <button type="submit" id="calculo_frete" class="frete">Calcular frete</button>
                 </div>
                 <button type="submit" id="add_carrinho">Adicionar ao carrinho</button>
             </div>

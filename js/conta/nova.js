@@ -1,113 +1,9 @@
-/*
-<div class="nome" >
-                            <label for="nome_inicio"> Usuário </label>
-                            <input type="text" id="nome_inicio">
-                        </div>
-
-                        <div class="nome">
-                            <label for="nome_fim">
-                                Sobrenome
-                            </label>
-                            <input type="text" name="" id="nome_fim">
-                        </div>
-
-                        <div id="email">
-                            <label for=""> E-mail </label>
-                            <input type="email" id="email">
-                        </div>
-
-                        <div class="senha">
-                            <label for="criar_senha"> Senha </label>
-                            <input type="password" id="criar_senha">
-                        </div>
-
-                        <div class="senha">
-                            <label for="confirm_senha"> Confirmar senha </label>
-                            <input type="password" id="confirm_senha">
-                        </div>
-                        
-                        <div class="dados_imp1">
-                            <label for="cpf">CPF</label>
-                            <input type="number" id="cpf">
-                        </div>
-
-                        <span class="dados_imp1">
-                            <label for="sexo">Sexo</label>
-                            <select name="sexo" id="sexo">
-                                <option value="--">--</option>
-                                <option value="feminino">Feminino</option>
-                                <option value="masculino">Masculino</option>
-                            </select>
-                            
-                        </span>
-                        
-                        <div class="dados_imp2">
-                            <label for="celular">Celular</label>
-                            <input type="number" id="celular">
-                        </div>
-                        
-                        <div class="dados_imp2">
-                            <label for="data_nasc">Data de nascimento</label>
-                            <input type="date" id="data_nasc">
-                        </div>
-
-                    </div>
-                    <hr>
-                    <div id="endereco_usuario">
-
-                        <h2 id="usuario">
-                            Endereço do usuário
-                        </h2>
-                        
-                        <div class="cep_endereco" >
-                            <label for="cep"> CEP</label>
-                            <input type="text" id="cep">
-                        </div>
-
-                        <div class="cep_endereco">
-                            <label for="endereco">
-                                Endereço
-                            </label>
-                            <input type="text" name="endereco" id="endereco">
-                        </div>
-
-                        <div class="detalhamento_endereco">
-                            <label for="numero"> Número </label>
-                            <input type="text" id="numero">
-                        </div>
-
-                        <div class="detalhamento_endereco">
-                            <label for="bairro"> Bairro </label>   
-                            <input type="text" id="bairro">
-                        </div>
-
-                        <div class="detalhamento_endereco">
-                            <label for="complemento"> Complemento </label>
-                            <input type="text" id="complemento">
-                        </div>
-                        
-                        <div class="cidade_estado">
-                            <label for="cidade">Cidade</label>
-                            <input type="text" id="cidade">
-                        </div>
-
-                        <div class="cidade_estado">
-                            <label for="estado">Estado</label>
-                            <select name="estado" id="estado">
-                                <option value="--">--</option>
-                                <option value="Acre">Acre</option>
-                                <option value="Alagoas">Alagoas</option>
-                            </select>
-                            
-                        </div>
-*/
-
 const form_cadastro = document.getElementById("form_cadastro");
 
 
 const nome_inicio = document.getElementById("nome_inicio");
 const nome_fim = document.getElementById("nome_fim");
-const email = document.getElementById("email");
+const email = document.getElementById("email_user");
 const senha = document.getElementById("criar_senha");
 const senha_confirm = document.getElementById("confirm_senha");
 const cpf = document.getElementById("cpf");
@@ -125,9 +21,14 @@ const cidade = document.getElementById("cidade");
 const estado = document.getElementById("estado");
 
 form_cadastro.addEventListener("submit", (event) => {
-    alert("opaa")
     event.preventDefault();
+    console.log(email)
+    validacoes();
+    form_cadastro.submit();
 
+})
+
+function validacoes(){
     if(nome_inicio.value == ""){
         alert("Preencha o nome")
     }
@@ -135,8 +36,10 @@ form_cadastro.addEventListener("submit", (event) => {
         alert("Preencha o sobrenome.")
     }
 
-    if(email.value == "" || !emailValido(email)){
-        alert("Preencha o email.")
+    if(email.value == "" || !emailValido(email.value)){
+        alert("E-mail inválido.")
+    }else{
+        alert(email.value)
     }
 
     if(sexo.value == "--"){
@@ -177,11 +80,11 @@ form_cadastro.addEventListener("submit", (event) => {
     
 
     if(cpf.value == "" || !cpfValido(cpf.value)){
-        alert("Preencha o CPF.")
+        alert("CPF inválido.")
     }
 
     if(cep.value == "" || !cepValido(cep.value)){
-        alert("Preencha o CEP.")
+        alert("CEP inválido.")
     }
 
     if(!senhaValida(senha.value, 8)){
@@ -191,12 +94,7 @@ form_cadastro.addEventListener("submit", (event) => {
     if(!comparaSenha(senha.value, senha_confirm.value)){
         alert("A confirmação da senha não condiz com a original ou o campo não possui 8 dígitos.");
     }
-
-    
-
-    form_cadastro.submit();
-
-})
+}
 
 function emailValido(email){
 
@@ -219,8 +117,6 @@ function cpfValido(cpf){
     if(cpfRegex.test(cpf)){
         alert(cpf)
         return true;
-    }else{
-        alert("nn deu "+cpf.value)
     }
     return false;
 }
@@ -231,7 +127,6 @@ function cepValido(cep){
     )
 
     if(cepRegex.test(cep)){
-        alert(cep)
         return true;
     }
     return false;

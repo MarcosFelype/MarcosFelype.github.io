@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ki Paladar</title>
-    <link href="/styles/style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
@@ -19,9 +19,7 @@
             <a href="pages/produtos/doces/frutas/doces_frutas.html">
                 Doces de frutas
             </a>
-            <a href="pages/produtos/novidades.html">
-                Novidades
-            </a>
+            
         </div>
 
         <div id="logo">
@@ -33,11 +31,11 @@
                 <span class="material-symbols-outlined">
                     search    
                 </span>
-                <input type="text" placeholder="Pesquise sobre produtos, ofertas...">
+                <input type="text" placeholder="Pesquise sobre produtos, ofertas..." id="pesq_input">
             </div>
             <div id="perfil_carrinho">
                 <a href="pages/conta/entrar.html">
-                    <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Perfil">
+                    <span class="material-symbols-outlined" alt="Meu Perfil" title="Meu Perfil" id="meu_perfil_icon">
                         account_circle
                     </span>
                 </a>
@@ -53,16 +51,16 @@
             <button id="prev-button"><img src="assets/seta_esq.png" alt="prev-button"></button>
             <div class="container-images">
               <img src="assets/kipaladar_test.jpg" alt="Ki Paladar test" class="slider on">
-              <img src="assets/cacto.jpg" alt="cacto" class="slider">
-              <img src="assets/espaco.jpg" alt="espaco" class="slider">
+              <img src="assets/kipaladar_test.jpg" alt="Ki Paladar test" class="slider on">
+              <img src="assets/kipaladar_test.jpg" alt="Ki Paladar test" class="slider on">
             </div>
             <button id="next-button"><img src="assets/seta_dir.png" alt="next-button"></button>
           </div>
 
         <div id="produtos">  
-            <div id="mais_vendidos" class="produtos_sections">
+            <div id="mais_vendidos"> 
                 <h2>Os mais vendidos</h2>
-                <div class="itens">
+                <div class="itens" class="produtos_sections">
                     <a href="pages/produtos/modelo_vendas.html">
                         <div class="item_espec">
                             <img src="/assets/produtos/doces_leite/leite_granulado_princ.jpeg" alt="Imagem Leite Granulado" title="Imagem Leite Granulado">
@@ -94,11 +92,13 @@
                             <h2>R$ 15,00</h2>
                         </div>
                     </a>
+                </div>
             </div>
+                
 
-            <div id="ofertas" class="produtos_sections">
+            <div id="ofertas">
                 <h2>Ofertas</h2>
-                <div class="itens">
+                <div class="itens" class="produtos_sections">
 
                     <a href="pages/produtos/modelo_vendas.html">
                         <div class="item_espec">
@@ -136,7 +136,7 @@
                 </div>
             </div>
 
-            <div id="categorias" class="produtos_sections">
+            <div id="categorias">
                 <div id="doces_leite" class="produtos_sections">
                     <h2>Doces de leite</h2>
                     <div class="itens">
@@ -171,15 +171,13 @@
                                 <h2>R$ 15,00</h2>
                             </div>
                         </a>
-                    </div>
-                    
-                        
+                    </div>     
                 </div>
 
-                <div id="doces_frutas" class="produtos_sections">
+                <div id="doces_frutas">
                     <h2>Doces de frutas
                     </h2>
-                    <div class="itens">
+                    <div class="itens" class="produtos_sections">
                         <a href="pages/produtos/modelo_vendas.html">
                             <div class="item_espec">
                                 <img src="/assets/produtos/doces_frutas/mamao_coco.jpeg" alt="Imagem Mamão com Coco" title="Imagem Mamão com Coco">
@@ -211,12 +209,13 @@
                                 <h2>R$ 15,00</h2>
                             </div>
                         </a>
+                    </div>
                 </div>
             </div>
 
-            <div id="novidades" class="produtos_sections">   
+            <div id="novidades">   
                 <h2>Novidades</h2>
-                <div class="itens">
+                <div class="itens" class="produtos_sections">
                     <a href="pages/produtos/modelo_vendas.html">
                         <div class="item_espec">
                             <img src="/assets/produtos/doces_leite/leite_granulado_princ.jpeg" alt="Imagem Leite Granulado" title="Imagem Leite Granulado">
@@ -251,11 +250,11 @@
                 </div>       
             </div>
 
-            <div id="pra_vc" class="produtos_sections">
+            <div id="pra_vc">
                 <h2>
                     Para você
                 </h2>
-                <div class="itens">
+                <div class="itens" class="produtos_sections">
                     <a href="pages/produtos/modelo_vendas.html">
                         <div class="item_espec">
                             <img src="/assets/produtos/doces_leite/leite_granulado_princ.jpeg" alt="Imagem Leite Granulado" title="Imagem Leite Granulado">
@@ -295,9 +294,9 @@
             <div id="titulo_news">
                 <h2>Digite seu nome e e-mail e receba nossas novidades</h2>
             </div>
-            <input type="text" placeholder="Seu nome aqui...">
-            <input type="email" placeholder="Seu email aqui...">
-            <button type="submit">
+            <input type="text" placeholder="Seu nome aqui..." id="nome">
+            <input type="email" placeholder="Seu email aqui..." id="email">
+            <button type="submit" onclick="validacao()">
                 Cadastrar
             </button>
         </div>

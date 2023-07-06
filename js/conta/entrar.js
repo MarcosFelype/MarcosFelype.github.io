@@ -1,9 +1,10 @@
 const form = document.getElementById("form_entrada");
-const email = document.getElementById("email");
-const senha = document.getElementById("senha");
+const email = document.getElementById("user_mail");
+const senha = document.getElementById("user_pass");
 
 var email_teste = "abc@domain.com";
 var senha_teste = "40028922";
+
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -22,6 +23,10 @@ function verificacoes(){
 
     if(!senhaValida(senha.value, 8)){
         alert("A senha precisa de, ao menos, 8 dígitos.")
+    }
+
+    if(emailValido(email.value) && senhaValida(senha.value) && (email.value == email_teste) || (senha.value == senha_teste)){
+        alert("Usuário logado com sucesso.")
     }
 }
 
